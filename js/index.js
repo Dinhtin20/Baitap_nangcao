@@ -1,6 +1,9 @@
 //Ex1
-document.getElementById('date').onclick =
-    function () {
+ document.getElementById('date').addEventListener('submit', function (note){
+    note.preventDefault();
+    date();
+ });
+    function date () {
         const dateInput = new Date(document.getElementById('dateInput').value);
         var day = dateInput.getDate() + 1;
         var month = dateInput.getMonth() + 1;
@@ -38,8 +41,11 @@ document.getElementById('date').onclick =
 
 //Ex2
 
-document.getElementById('day').onclick =
-    function () {
+document.getElementById('day').addEventListener('submit', function(note){
+    note.preventDefault();
+    day();
+});
+    function day() {
         const dayInput = new Date(document.getElementById('dayInput').value);
         var b2Month = dayInput.getMonth() + 1;
         var b2Year = dayInput.getFullYear();
@@ -66,8 +72,11 @@ document.getElementById('day').onclick =
 
 //Ex 3
 
-document.getElementById('Num').onclick =
-    function () {
+document.getElementById('Num').addEventListener('submit', function(note){
+    note.preventDefault();
+    Num();
+});
+    function Num() {
         const numInput = document.getElementById('numInput').value;
         const number1 = Math.floor(numInput / 100);
         const number2 = Math.floor((numInput % 100) / 10);
@@ -175,8 +184,11 @@ document.getElementById('Num').onclick =
 
 //Ex4
 
-document.getElementById('coordinates').onclick =
-    function () {
+document.getElementById('coordinates').addEventListener('submit', function (note){
+    note.preventDefault();
+    coordinates();
+});
+    function coordinates () {
         const natesSV1x = +document.getElementById("coordinates xsv1").value;
         const natesSV1y = +document.getElementById("coordinates ysv1").value;
         const natesSV2x = +document.getElementById("coordinates xsv2").value;
